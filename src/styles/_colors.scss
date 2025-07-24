@@ -1,0 +1,7 @@
+:root{
+  --primary-color: #009F6B; /* Customize your primary color */
+  --secondary-color: rgba(0, 159, 107, 0.10); /* Customize your secondary color */
+}
+
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
