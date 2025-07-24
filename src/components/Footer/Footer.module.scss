@@ -8,6 +8,15 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  @media (max-width: 600px) {
+    width: 135px;
+    height: 56px;
+    border-radius: 0% 0 16px 16px;
+    svg{
+      width: 98px;
+      height: 32px;
+    }
+  }
   // &::after{
   //   content: "";
   //   position: absolute;
@@ -40,6 +49,11 @@
     background: #009F6B;
     box-shadow: 0 0 0 0.5px #009F6B;
   }
+  @media (max-width: 600px) {
+    width: 28px;
+    height: 28px;
+    left: -28px;
+  }
 }
 .footerLogoBackgroundCorner2{
   position: absolute;
@@ -61,5 +75,10 @@
     background: #009F6B;
   overflow: hidden;
     box-shadow: 0 0 0 0.5px #009F6B;
+  }
+  @media (max-width: 600px) {
+    width: 28px;
+    height: 28px;
+    right: -28px;
   }
 }

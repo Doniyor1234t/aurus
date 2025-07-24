@@ -141,22 +141,12 @@ const Header = () => (
                 <Button>So‘rovdan o‘tish</Button>
                 <IconButton
                   size="large"
-                  edge="end"
-                  color="inherit"
-                  aria-label="account of current user"
-                  aria-controls="menu-appbar"
-                  aria-haspopup="true"
                   sx={{ ml: 2, backgroundColor: '#F8F8F8' }}
                 >
                   <ProfileIcon />
                 </IconButton>
                 <IconButton
                   size="large"
-                  edge="end"
-                  color="inherit"
-                  aria-label="account of current user"
-                  aria-controls="menu-appbar"
-                  aria-haspopup="true"
                   sx={{ ml: 2, backgroundColor: '#F8F8F8' }}
                 >
                   <BasketIcon />

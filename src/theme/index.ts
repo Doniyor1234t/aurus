@@ -43,7 +43,7 @@ const theme = createTheme({
     h1: {
       fontFamily: 'Nunito, sans-serif',
       fontSize: "60px",
-      lineHeight: "60px",
+      lineHeight: "68px",
       fontWeight: 700,
       "@media (max-width: 600px)": {
         fontSize: "34px",
@@ -165,7 +165,19 @@ const theme = createTheme({
               padding: "8px 24px",
               fontSize: "18px",
               fontWeight: 700,
+              // [theme.breakpoints.up('xs')]: {
+              // },
+
+              '& .MuiButton-endIcon': {
+                marginLeft: '12px', 
+                marginRight: '0px', 
+                "& svg": {
+                  width: '32px',
+                  height: '32px',
+                }
+              },
               "@media (max-width: 600px)": {
+                maxHeight: '44px',
                 padding: "6px 16px",
                 fontSize: "14px",
                 fontWeight: 600,
@@ -193,8 +205,10 @@ const theme = createTheme({
             padding: '10px 16px',
             textTransform: 'none',
             borderRadius: "40px",
+
             border: 'none',
             fontWeight: 600,
+            lineHeight: '128.571%',
             '& .MuiButton-endIcon': {
               marginLeft: '12px', // pushes icon to far right (optional)
               marginRight: '0px', 

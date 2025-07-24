@@ -1,10 +1,11 @@
-import { Container } from '@mui/material';
 import { MainBlock } from './Main/Main';
+import { ReasonsBlock } from './Reasons/ReasonsBlock';
 
 const Landing = () => (
-  <Container>
+  <>
     <MainBlock />
-  </Container>
+    <ReasonsBlock />
+  </>
 );
 
 export default Landing;
