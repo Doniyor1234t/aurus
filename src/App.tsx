@@ -6,7 +6,7 @@ import theme from './theme';
 const App = () => (
   <ThemeProvider theme={theme}>
     <CssBaseline />
-    <BrowserRouter>
+    <BrowserRouter basename="/aurus/">
       <AppRoutes />
     </BrowserRouter>
   </ThemeProvider>
