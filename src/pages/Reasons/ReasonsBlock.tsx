@@ -1,5 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 import ReasonCard from "./components/ReasonCard/ReasonCard";
+import bgImg from "../../assets/images/Circle.png"
 
 export const ReasonsBlock = () => {
   const reasons = [
@@ -30,13 +31,23 @@ export const ReasonsBlock = () => {
   ]
   return (
     <Box sx={{ position: "relative" }}>
-      <Container>
+      <Container maxWidth="xl">
         <Box sx={{
           display: "flex",
           flexDirection: "column",
           rowGap: 1.5,
           padding: { xs: "32px 0", md: "80px 0" },
+          position: "relative",
         }}>
+          <img src={bgImg} alt="Description" style={{ 
+            maxWidth: "100%", 
+            height: "auto", 
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            zIndex: -1,
+            }} />
           <Typography variant="h2" sx={{ alignSelf: "flex-start", fontSize: "50px", maxWidth: "590px", lineHeight: "112%", mb: { xs: 2, md: 0 } }}>
             Suyak va bo‘g‘im og‘rig‘ining asosiy sabablari
           </Typography>
