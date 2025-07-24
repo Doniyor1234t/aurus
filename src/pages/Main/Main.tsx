@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, Chip, Container, Rating, Typography } from "@mui/material"
+import { Box, Button, ButtonGroup, Container, Rating, Typography } from "@mui/material"
 import ArrowRightIcon from "../../assets/icons/ArrowRightIcon"
 import RightArrow from "../../assets/icons/RightArrow"
 import cls from "./Main.module.scss"

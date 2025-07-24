@@ -1,22 +1,27 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
-import path from 'path';
+
+import { fileURLToPath } from 'url';
+import { dirname, resolve } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export default defineConfig({
   base: "/aurus/",
   plugins: [react()],
   resolve: {
     alias: {
-      // '@': '/src',
-      components: '/src/components',
-      pages: '/src/pages',
-      layouts: '/src/layouts',
-      router: '/src/router',
-      theme: '/src/theme',
-      utils: '/src/utils',
-      hooks: '/src/hooks',
-      assets: path.resolve(__dirname, 'src/assets') ,
-      styles: '/src/styles',
+      '@': resolve(__dirname, 'src'),
+      components: resolve(__dirname, 'src/components'),
+      pages: resolve(__dirname, 'src/pages'),
+      layouts: resolve(__dirname, 'src/layouts'),
+      router: resolve(__dirname, 'src/router'),
+      theme: resolve(__dirname, 'src/theme'),
+      utils: resolve(__dirname, 'src/utils'),
+      hooks: resolve(__dirname, 'src/hooks'),
+      assets: resolve(__dirname, 'src/assets'),
+      styles: resolve(__dirname, 'src/styles'),
     },
   },
 });

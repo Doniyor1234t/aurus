@@ -5,9 +5,9 @@ import Logo from "assets/Logo.svg";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import ProfileIcon from 'assets/icons/ProfileIcon';
-import BasketIcon from 'assets/icons/BasketIcon';
-import MenuIcon from 'assets/icons/MenuIcon';
+import ProfileIcon from '../../assets/icons/ProfileIcon';
+import BasketIcon from '../../assets/icons/BasketIcon';
+import MenuIcon from '../../assets/icons/MenuIcon';
 const AutoHeightToolbar = styled(Toolbar)(({ theme }) => ({
   minHeight: 72, 
   [theme.breakpoints.up("sm")]: {

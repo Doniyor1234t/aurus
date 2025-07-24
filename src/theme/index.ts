@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material/styles';
-import { red, blueGrey } from '@mui/material/colors';
+import { red } from '@mui/material/colors';
 declare module '@mui/material/Button' {
   interface ButtonPropsSizeOverrides {
     largeSquare: true;
@@ -82,7 +82,7 @@ const theme = createTheme({
   components: {
     MuiButtonGroup: {
       styleOverrides: {
-        root: ({theme, ownerState}) => {
+        root: ({ownerState}) => {
           let sizeStyles = {};
 
           if (ownerState.size === 'smallRound') {
@@ -157,7 +157,7 @@ const theme = createTheme({
         size: 'medium', // default size
       },
       styleOverrides: {
-        root: ({ ownerState, theme }) => {
+        root: ({ ownerState }) => {
           let sizeStyles = {};
 
           if (ownerState.size === 'largeSquare') {
