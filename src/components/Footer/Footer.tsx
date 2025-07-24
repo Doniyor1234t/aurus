@@ -157,7 +157,7 @@ const Footer = () => {
         <Box sx={{ bgcolor: "#fff", color: "#737374", py: { xs: 4, md: 6 }, px: { xs: 4, md: 6.25 }, width: "100%", borderRadius: "30px" }}>
           <Grid container spacing={4} columnSpacing={{ xs: 2, sm: 4, md: 2.5 }} sx={{ justifyContent: "center" }}>
             {Object.entries(connects).map(([key, items]) => (
-              <Grid item key={key} width={"248px"}>
+              <Grid key={key} sx={{ width: "248px" }} component="div">
                 <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
                   <Typography variant="body1" sx={{ 
                     fontSize: "12px", 
