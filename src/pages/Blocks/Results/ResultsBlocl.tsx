@@ -3,10 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import cls from "./ResultsBlock.module.scss";
 import { useRef, useState } from "react";
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
+import 'swiper/swiper-bundle.css';
 import resultImg from "assets/images/0ba8bc39e00267813d00a9ea8e01d3e810e9b214.png";
 
 export const ResultsBlock = () => {
