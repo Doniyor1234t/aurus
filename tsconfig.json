@@ -5,6 +5,10 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
     "typeRoots": ["./node_modules/@types", "./node_modules/swiper/types"],
     "noUnusedLocals": false,
     "baseUrl": ".",

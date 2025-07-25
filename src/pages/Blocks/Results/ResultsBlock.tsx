@@ -1,15 +1,19 @@
 import { Box, Button, Container } from "@mui/material"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import type { Swiper as SwiperType } from 'swiper';
 import cls from "./ResultsBlock.module.scss";
 import { useRef, useState } from "react";
-import 'swiper/swiper-bundle.css';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+import 'swiper/css/free-mode';
 import resultImg from "assets/images/0ba8bc39e00267813d00a9ea8e01d3e810e9b214.png";
 
 export const ResultsBlock = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+  const prevRef = useRef<HTMLButtonElement | null>(null);
+  const nextRef = useRef<HTMLButtonElement | null>(null);
   return (
     <Box>
       <Container maxWidth="xl">
@@ -25,7 +29,7 @@ export const ResultsBlock = () => {
         style={{
           '--swiper-navigation-color': '#fff',
           '--swiper-pagination-color': '#fff',
-        }}
+        } as React.CSSProperties}
         onBeforeInit={(swiper) => {
           if (swiper.params.navigation && typeof swiper.params.navigation !== "boolean") {
             swiper.params.navigation.prevEl = prevRef.current;
@@ -57,7 +61,6 @@ export const ResultsBlock = () => {
       modules={[FreeMode, Navigation, Thumbs]}
       className={cls.thumbSwiper}
     >
-      <Container maxWidth="xl">
       {[...Array(10)].map((_, i) => (
         <SwiperSlide key={i}>
           <Box className={cls.thumbWrapper}>
@@ -66,7 +69,6 @@ export const ResultsBlock = () => {
         </SwiperSlide>
       ))}
 
-      </Container>
     </Swiper>
     </Box>
   )
