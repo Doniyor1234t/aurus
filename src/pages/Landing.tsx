@@ -1,10 +1,14 @@
-import { MainBlock } from './Main/Main';
-import { ReasonsBlock } from './Reasons/ReasonsBlock';
+import { DeadlinesBlock } from './Blocks/Deadlines/Deadlines';
+import { MainBlock } from './Blocks/Main/Main';
+import { ReasonsBlock } from './Blocks/Reasons/ReasonsBlock';
+import { ResultsBlock } from './Blocks/Results/ResultsBlocl';
 
 const Landing = () => (
   <>
     <MainBlock />
     <ReasonsBlock />
+    <DeadlinesBlock />
+    <ResultsBlock />
   </>
 );
 
