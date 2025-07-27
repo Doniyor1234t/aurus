@@ -24,7 +24,42 @@ export const DeadlinesBlock = () => {
       backdropFilter: "blur(20px)",
       textAlign: "center",
       backgroundColor: "#F5FBF9",
-     }}>
+      overflow: 'hidden',
+    }}>
+      <Box sx={{
+        position: "absolute",
+        zIndex: -1,
+        top: "720px",
+        left: "-170px",
+        width: "240px",
+        height: "240px",
+        display: { xs: "none", md: "block" },
+        "& svg": {
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "top",
+        }
+      }}>
+        <BackgroundIcon />
+      </Box>
+      {/* <Box sx={{
+        position: "absolute",
+        zIndex: -1,
+        top: "-180px",
+        right: "-178px",
+        width: "240px",
+        height: "240px",
+        display: { xs: "none", md: "block" },
+        "& svg": {
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "top",
+        }
+      }}>
+        <BackgroundIcon />
+      </Box> */}
       <Container maxWidth="xl">
         <Box sx={{
           display: "flex",
@@ -35,40 +70,6 @@ export const DeadlinesBlock = () => {
           gap: 6,
           position: "relative",
         }}>
-          <Box sx={{
-            position: "absolute",
-            zIndex: -1,
-            top: "720px",
-            left: "-170px",
-            width: "240px",
-            height: "240px",
-            display: { xs: "none", md: "block" },
-            "& svg": {
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "top",
-            }
-          }}>
-            <BackgroundIcon />
-          </Box>
-          <Box sx={{
-            position: "absolute",
-            zIndex: -1,
-            top: "-180px",
-            right: "-178px",
-            width: "240px",
-            height: "240px",
-            display: { xs: "none", md: "block" },
-            "& svg": {
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "top",
-            }
-          }}>
-            <BackgroundIcon />
-          </Box>
           <Box 
             sx={{
               display: "flex",

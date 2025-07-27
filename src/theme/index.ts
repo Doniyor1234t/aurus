@@ -26,6 +26,7 @@ const theme = createTheme({
   palette: {
     primary: {
       main: '#009F6B', 
+      dark: '#007c52', // Darker shade for hover
     },
     secondary: {
       main: 'rgba(0, 159, 107, 0.10)',
@@ -189,6 +190,9 @@ const theme = createTheme({
           if (ownerState.size === 'smallRound') {
             sizeStyles = {
               padding: '8px 12px',
+              "@media (max-width: 600px)": {
+                padding: "4px 8px",
+              }
 
               // minWidth: 40,
               // height: 40,
