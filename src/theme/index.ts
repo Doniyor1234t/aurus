@@ -248,6 +248,21 @@ const theme = createTheme({
           style: {
             backgroundColor: '#fff',
             color: '#009F6B',
+            fontSize: "18px", 
+            fontWeight: 700, 
+            padding: "8px 8px 8px 24px",
+            "& .MuiButton-endIcon": {
+              height: '32px',
+              width: '32px',
+              "svg": {
+                width: '100%',
+                height: '100%',
+              }
+            },
+            "@media (max-width: 600px)": {
+              padding: "6px 14px",
+              fontSize: "14px",
+            },
             '&:hover': {
               backgroundColor: '#f5f5f5',
             },

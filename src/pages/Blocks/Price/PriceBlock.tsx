@@ -38,19 +38,23 @@ export const PriceBlock = () => {
     <Box sx={{
       position: "relative",
     }}>
-      {/* <Box sx={{
+      <Box sx={{
         position: { xs: "relative", md: "absolute" },
         zIndex: -1,
         top: 0,
         left: 0,
         width: { xs: "100%", md: "50%" },
-        height: { xs: "375px", md: "auto" },
+        height: { xs: "375px", md: "100%" },
         display: "block",
-        borderRadius: "0 0 0 20px",
+        borderRadius: { xs: "0 0 20px 20px", md: "0 32px 32px 0" },
         overflow: "hidden",
       }}>
-        <img src={Img} alt="Background" style={{ width: "100%", height: "100%" }} />
-      </Box> */}
+        <img src={Img} alt="Background" style={{ 
+          width: "100%", 
+          height: "100%", 
+          objectFit: "cover",
+        }} />
+      </Box>
       <Container maxWidth="xl" >
         <Box sx={{
           display: "flex",
@@ -60,21 +64,13 @@ export const PriceBlock = () => {
           height: { xs: "auto", md: "900px" },
         }}>
           <Box sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            width: {xs:"100%", md:"50%"}
-          }}>
-            <img src={Img} alt="Background" style={{ width: "100%", height: "100%" }} />
-          </Box>
-          <Box sx={{
             position: "relative",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             width: {xs:"100%", md:"50%"},
-            gap: 4,
+            m: { xs: "24px 0 32px 0", md: "auto 0 auto auto" },
+            gap: { xs: 2.5, md: 4 },
           }}>
             <Box sx={{
               display: "flex",
@@ -206,6 +202,7 @@ export const PriceBlock = () => {
                 fontSize: { xs: "14px", md: "18px" },
                 lineHeight: { xs: "18px", md: "24px" },
                 fontWeight: 700,
+                p: { xs: "6px 16px", md: "8px 20px" },
               }}>
                 Sotib olish
               </Button>

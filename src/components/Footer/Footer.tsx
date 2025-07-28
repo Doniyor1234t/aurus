@@ -138,7 +138,8 @@ const Footer = () => {
             // color="primary"
             sx={{ 
               width: "100%", 
-              maxWidth: "209px", 
+              flex: 1,
+              maxWidth: { xs: "161px", md: "209px" }, 
               fontSize: "18px", 
               fontWeight: 700, 
               padding: "8px 8px 8px 24px",
