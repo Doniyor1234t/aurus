@@ -1,0 +1,775 @@
+[
+  {
+    "label": {
+      "uz": "Yoshingiz",
+      "ru": "Опрос"
+    },
+    "description": {
+      "uz": "Iltimos, yoshingizni tanlang:",
+      "ru": "Пожалуйста, выберите ваш возраст."
+    },
+    "type": "radio",
+    "answers": [
+      {
+        "label": {
+          "uz": "18-25",
+          "ru": "18-25"
+        }
+      },
+      {
+        "label": {
+          "uz": "26-35",
+          "ru": "26-35"
+        }
+      },
+      {
+        "label": {
+          "uz": "36-50",
+          "ru": "36-50"
+        }
+      },
+      {
+        "label": {
+          "uz": "50-65",
+          "ru": "50-65"
+        }
+      },
+      {
+        "label": {
+          "uz": "65+",
+          "ru": "65+"
+        }
+      }
+    ]
+  },
+  {
+    "label": {
+      "uz": "Jinsingiz",
+      "ru": "Пол"
+    },
+    "description": {
+      "uz": "Iltimos, jinsingizni tanlang:",
+      "ru": "Пожалуйста, выберите ваш пол."
+    },
+    "type": "radio",
+    "answers": [
+      {
+        "label": {
+          "uz": "Erkak",
+          "ru": "Мужчина"
+        }
+      },
+      {
+        "label": {
+          "uz": "Ayol",
+          "ru": "Женщина"
+        }
+      },
+      {
+        "label": {
+          "uz": "Boshqa",
+          "ru": "Другое"
+        }
+      }
+    ]
+  },
+  {
+    "label": {
+      "uz": "Vazningiz?",
+      "ru": "Ваш вес?"
+    },
+    "description": {
+      "uz": "",
+      "ru": "Пожалуйста, выберите ваш вес."
+    },
+    "type": "radio",
+    "answers": [
+      {
+        "label": {
+          "uz": "Og'ir vaznli",
+          "ru": "Тяжелый вес"
+        }
+      },
+      {
+        "label": {
+          "uz": "Normal",
+          "ru": "Средний вес"
+        }
+      },
+      {
+        "label": {
+          "uz": "Ozg`in",
+          "ru": "Легкий вес"
+        }
+      }
+    ]
+  },
+  {
+    "label": {
+      "uz": "Bo`yingiz?",
+      "ru": "Ваш рост?"
+    },
+    "description": {
+      "uz": "",
+      "ru": "Пожалуйста, выберите ваш рост."
+    },
+    "type": "radio",
+    "answers": [
+      {
+        "label": {
+          "uz": "Past",
+          "ru": "Низкий рост"
+        }
+      },
+      {
+        "label": {
+          "uz": "O`rta",
+          "ru": "Средний рост"
+        }
+      },
+      {
+        "label": {
+          "uz": "Baland",
+          "ru": "Высокий рост"
+        }
+      }
+    ]
+  },
+  {
+    "label": {
+      "uz": "Uyqu tartibingiz qanday?",
+      "ru": "Ваш режим сна?"
+    },
+    "description": {
+      "uz": "",
+      "ru": "Пожалуйста, выберите ваш режим сна."
+    },
+    "type": "radio",
+    "style": "vertical",
+    "answers": [
+      {
+        "label": {
+          "uz": "Juda yaxshi",
+          "ru": "Очень хорошо"
+        }
+      },
+      {
+        "label": {
+          "uz": "Kech uhlayman",
+          "ru": "Поздно ложусь"
+        }
+      },
+      {
+        "label": {
+          "uz": "Uyqusizlik",
+          "ru": "Бессонница"
+        }
+      },
+      {
+        "label": {
+          "uz": "Uyqudan keyin ham charchoq bo`ladi",
+          "ru": "После сна все еще устаю"
+        }
+      }
+    ]
+  },
+  {
+    "label": {
+      "uz": "Sport bilan qanchalik shug`ullanasiz?",
+      "ru": "Ваш режим питания?"
+    },
+    "description": {
+      "uz": "Jismoniy faollik darajangiz qanday?",
+      "ru": "Пожалуйста, выберите ваш режим питания."
+    },
+    "type": "radio",
+    "style": "vertical",
+    "answers": [
+      {
+        "label": {
+          "uz": "Kunni doimiy sport mashqlari bilan boshlayman",
+          "ru": "Я питаюсь здоровой пищей"
+        }
+      },
+      {
+        "label": {
+          "uz": "Haftada o`rtacha 3 martta",
+          "ru": "Часто ем фастфуд"
+        }
+      },
+      {
+        "label": {
+          "uz": "Kam, 1-2 martta/haftada",
+          "ru": "Не ем вообще"
+        }
+      },
+      {
+        "label": {
+          "uz": "Shug`ullanmayman/ kundalik harakatlar holos",
+          "ru": "Не ем вообще"
+        }
+      }
+    ]
+  },
+  {
+    "label": {
+      "uz": "Kun davomida qancha harakat qilasiz?",
+      "ru": "Что вы считаете здоровым образом жизни?"
+    },
+    "description": {
+      "uz": "(qadam)",
+      "ru": ""
+    },
+    "type": "radio",
+    "style": "vertical",
+    "answers": [
+      {
+        "label": {
+          "uz": "Juda faolman 8000-10000 +",
+          "ru": "Не менее 10,000 шагов"
+        }
+      },
+      {
+        "label": {
+          "uz": "O`rtacha faolman 5000-7000",
+          "ru": "Не менее 5,000 шагов"
+        }
+      },
+      {
+        "label": {
+          "uz": "Passivman 2000-4000",
+          "ru": "Не менее 1,000 шагов"
+        }
+      },
+      {
+        "label": {
+          "uz": "Deyarli harakatsizman 0-1000",
+          "ru": "Совсем не двигаюсь"
+        }
+      }
+    ]
+  },
+  {
+    "label": {
+      "uz": "Ish faolyatingiz qaysi turga yaqin?",
+      "ru": "Что вы знаете о здоровом образе жизни?"
+    },
+    "description": {
+      "uz": "",
+      "ru": ""
+    },
+    "answers": [
+      {
+        "label": {
+          "uz": "Juda faolman 8000-10000 +",
+          "ru": "Физическая активность"
+        }
+      },
+      {
+        "label": {
+          "uz": "O`rtacha faolman 5000-7000",
+          "ru": "Питание"
+        }
+      },
+      {
+        "label": {
+          "uz": "Passivman 2000-4000",
+          "ru": "Психологическое состояние"
+        }
+      },
+      {
+        "label": {
+          "uz": "Deyarli harakatsizman 0-1000",
+          "ru": "Здоровье"
+        }
+      }
+    ],
+    "type": "radio",
+    "style": "vertical"
+  },
+  {
+    "label": {
+      "uz": "Oxirgi 3 oy ichida quyidagi mahsulotlarni qanchalik  tez-tez iste’mol qilgansiz?",
+      "ru": "Что вы считаете здоровым образом жизни?"
+    },
+    "description": {
+      "uz": "(Tuzli mahsulotlar/ trans yog`lar/ Shirinliklar/Go`sht mahsulotlari)",
+      "ru": ""
+    },
+    "type": "radio",
+    "style": "vertical",
+    "answers": [
+      {
+        "label": {
+          "uz": "Deyarli har kuni",
+          "ru": "Здоровое питание, физическая активность и хороший сон"
+        }
+      },
+      {
+        "label": {
+          "uz": "Haftada 3 martta",
+          "ru": "Только физическая активность"
+        }
+      },
+      {
+        "label": {
+          "uz": "Juda kam, deyarli is`temol qilmayman",
+          "ru": "Только здоровое питание"
+        }
+      }
+    ]
+  },
+  {
+    "label": {
+      "uz": "Ohirgi 6 oyda quyidagilar kuzatilganmi?",
+      "ru": "Что вы знаете о здоровом образе жизни?"
+    },
+    "description": {
+      "uz": "",
+      "ru": ""
+    },
+    "answers": [
+      {
+        "label": {
+          "uz": "Tirnoqdagi mo`rtlashuv",
+          "ru": "Чувствую себя уставшим"
+        }
+      },
+      {
+        "label": {
+          "uz": "Soch to`kilishi",
+          "ru": "Чувствую себя в норме"
+        }
+      },
+      {
+        "label": {
+          "uz": "Charchoq",
+          "ru": "Чувствую себя отлично"
+        }
+      },
+      {
+        "label": {
+          "uz": "Teridagi o`zgraishlar(toshmalar/qurish)",
+          "ru": "Чувствую себя отлично"
+        }
+      },
+      {
+        "label": {
+          "uz": "Tish yemirilishi/kasalligi",
+          "ru": "Чувствую себя отлично"
+        }
+      }
+    ],
+    "type": "checkbox",
+    "style": "vertical"
+  },
+  {
+    "label": {
+      "uz": "So`nggi bir yillikdagi o`zgarishlar?",
+      "ru": "Что вы знаете о здоровом образе жизни?"
+    },
+    "description": {
+      "uz": "",
+      "ru": ""
+    },
+    "answers": [
+      {
+        "label": {
+          "uz": "Jinsiy maylning kamayishi",
+          "ru": "Ухудшение состояния"
+        }
+      },
+      {
+        "label": {
+          "uz": "Qorin sohasiga yog` yig`ilishi",
+          "ru": "Без изменений"
+        }
+      },
+      {
+        "label": {
+          "uz": "Soch to`kilishi",
+          "ru": "Улучшение состояния"
+        }
+      },
+      {
+        "label": {
+          "uz": "Kayfiyatning tez o`zgarishi",
+          "ru": "Улучшение состояния"
+        }
+      },
+      {
+        "label": {
+          "uz": "Hechqanday o`zgarish yo`q",
+          "ru": "Улучшение состояния"
+        }
+      }
+    ],
+    "type": "radio",
+    "style": "vertical"
+  },
+  {
+    "label": {
+      "uz": "Sizda quydagilardan nechtasi bor?",
+      "ru": "Вопросы, которые вас интересуют"
+    },
+    "description": {
+      "uz": "",
+      "ru": ""
+    },
+    "answers": [
+      {
+        "label": {
+          "uz": "Yurak qon tomir kasalliklari",
+          "ru": "Вопросы, которые вас интересуют"
+        }
+      },
+      {
+        "label": {
+          "uz": "Gormonal buzilishlar",
+          "ru": "Вопросы, которые вас интересуют"
+        }
+      },
+      {
+        "label": {
+          "uz": "Moddalar almashinuvining yomonlashuvi",
+          "ru": "Вопросы, которые вас интересуют"
+        }
+      },
+      {
+        "label": {
+          "uz": "Immunitet pasayishi",
+          "ru": "Вопросы, которые вас интересуют"
+        }
+      }
+    ],
+    "type": "checkbox",
+    "style": "vertical"
+  },
+  {
+    "label": {
+      "uz": "Sizdagi tez-tez ichiladigan dorilar?",
+      "ru": ""
+    },
+    "description": {
+      "uz": "",
+      "ru": ""
+    },
+    "answrs": [
+      {
+        "label": {
+          "uz": "Og`riq qoldiruvchilar",
+          "ru": "Обезболивающие"
+        }
+      },
+      {
+        "label": {
+          "uz": "Gormonlar",
+          "ru": "Гормоны"
+        }
+      },
+      {
+        "label": {
+          "uz": "Antibiotiklar",
+          "ru": "Антибиотики"
+        }
+      },
+      {
+        "label": {
+          "uz": "Hechqanday dori ichmayman",
+          "ru": "Не принимаю никаких лекарств"
+        }
+      }
+    ],
+    "type": "checkbox",
+    "style": "vertical"
+  },
+  {
+    "label": {
+      "uz": "Oila a`zolaringizda (nasliy) bo`g`im kasalliklari bo`lganmi?",
+      "ru": "Были ли у ваших родственников заболевания суставов?"
+    },
+    "description": {
+      "uz": "",
+      "ru": ""
+    },
+    "answers": [
+      {
+        "label": {
+          "uz": "Bo`lgan/ ko`p uchraydi",
+          "ru": "Сердечно-сосудистые заболевания"
+        }
+      },
+      {
+        "label": {
+          "uz": "Bo`lmagan/ deyarli eshitmaganman",
+          "ru": "Диабет"
+        }
+      },
+      {
+        "label": {
+          "uz": "Bilmayman",
+          "ru": "Гормональные нарушения"
+        }
+      }
+    ],
+    "type": "radio",
+    "style": "vertical"
+  },
+  {
+    "label": {
+      "uz": "Suyak bilan bog`liq jarohat (travma)olganmisiz?",
+      "ru": "Были ли у вас травмы, связанные с костями?"
+    },
+    "description": {
+      "uz": "",
+      "ru": ""
+    },
+    "answers": [
+      {
+        "label": {
+          "uz": "Olganman / 1-3 yil ichida",
+          "ru": "Как поддерживать здоровый образ жизни?"
+        }
+      },
+      {
+        "label": {
+          "uz": "Olganman / 10-15 yil oldin",
+          "ru": "Какие продукты питания полезны?"
+        }
+      },
+      {
+        "label": {
+          "uz": "Olganman / bolaligimda bo`lgan",
+          "ru": "Какие физические упражнения полезны?"
+        }
+      },
+      {
+        "label": {
+          "uz": "Hechqanday jarohat, urilish bo`lmagan",
+          "ru": "Как управлять стрессом?"
+        }
+      }
+    ],
+    "type": "radio",
+    "style": "vertical"
+  },
+  {
+    "label": {
+      "uz": "Uzoq vaqt harakatsizlikdan keyin bo`ginlarda nimani his qilasiz?",
+      "ru": "Что вы чувствуете в суставах после длительного бездвижения?"
+    },
+    "description": {
+      "uz": "(bir nechtasini tanlash mumkin)",
+      "ru": ""
+    },
+    "answers": [
+      {
+        "label": {
+          "uz": "Qotish",
+          "ru": "Боль"
+        }
+      },
+      {
+        "label": {
+          "uz": "Qirsillash",
+          "ru": "Жесткость"
+        }
+      },
+      {
+        "label": {
+          "uz": "Shish",
+          "ru": "Воспаление"
+        }
+      },
+      {
+        "label": {
+          "uz": "Og`riq",
+          "ru": "Воспаление"
+        }
+      },
+      {
+        "label": {
+          "uz": "Og`riq",
+          "ru": "Воспаление"
+        }
+      }
+    ],
+    "type": "checkbox",
+    "style": "wrap"
+  },
+  {
+    "label": {
+      "uz": "Quyidagi harakatlarda qiynalasizmi?",
+      "ru": "Вы испытываете следующие симптомы?"
+    },
+    "description": {
+      "uz": "",
+      "ru": ""
+    },
+    "answers": [
+      {
+        "label": {
+          "uz": "Zinadan chiqish",
+          "ru": "Трудности при вставании с сидячего положения"
+        }
+      },
+      {
+        "label": {
+          "uz": "O`tirish",
+          "ru": "Трудности при ходьбе"
+        }
+      },
+      {
+        "label": {
+          "uz": "O`tirgan joydan turish",
+          "ru": "Трудности при вставании с лежачего положения"
+        }
+      },
+      {
+        "label": {
+          "uz": "Tez yurish",
+          "ru": "Трудности при повороте головы"
+        }
+      },
+      {
+        "label": {
+          "uz": "Qiynalmayman",
+          "ru": "Трудности при повороте головы"
+        }
+      }
+    ],
+    "type": "checkbox",
+    "style": "vertical"
+  },
+  {
+    "label": {
+      "uz": "Kun davomida qancha harakat qilasiz?",
+      "ru": "Что вы делаете для поддержания здоровья?"
+    },
+    "description": {
+      "uz": "",
+      "ru": ""
+    },
+    "answers": [
+      {
+        "label": {
+          "uz": "Tizza",
+          "ru": "Другое"
+        }
+      },
+      {
+        "label": {
+          "uz": "Chanoq",
+          "ru": "Другое"
+        }
+      },
+      {
+        "label": {
+          "uz": "Bel",
+          "ru": "Другое"
+        }
+      },
+      {
+        "label": {
+          "uz": "Bilak",
+          "ru": "Другое"
+        }
+      },
+      {
+        "label": {
+          "uz": "Bo`yin",
+          "ru": "Другое"
+        }
+      },
+      {
+        "label": {
+          "uz": "Og`riq yo`q",
+          "ru": "Другое"
+        }
+      }
+    ],
+    "type": "checkbox",
+    "style": "wrap"
+  },
+  {
+    "label": {
+      "uz": "Og`riq qachon kuchayadi?",
+      "ru": "Когда усиливается боль?"
+    },
+    "description": {
+      "uz": "",
+      "ru": ""
+    },
+    "answers": [
+      {
+        "label": {
+          "uz": "Ertalab",
+          "ru": "Другое"
+        }
+      },
+      {
+        "label": {
+          "uz": "Kechqurun",
+          "ru": "Другое"
+        }
+      },
+      {
+        "label": {
+          "uz": "Harakatda",
+          "ru": "Другое"
+        }
+      },
+      {
+        "label": {
+          "uz": "Harakatsizlikda",
+          "ru": "Другое"
+        }
+      },
+      {
+        "label": {
+          "uz": "Yog`ingarchilik",
+          "ru": "Другое"
+        }
+      }
+    ],
+    "type": "checkbox",
+    "style": "wrap"
+  },
+  {
+    "label": {
+      "uz": "So‘rovnomadan o‘tganingiz  uchun rahmat!",
+      "ru": "Спасибо за участие в опросе!"
+    },
+    "description": {
+      "uz": "Siz bilan bog‘lanishimiz uchun iltimos, ariza qoldiring.Mutaxassisimiz sizga qo‘ng‘iroq qiladi va mos kursni tavsiya qiladi.",
+      "ru": "Пожалуйста, оставьте заявку, чтобы мы могли с вами связаться. Наш специалист свяжется с вами и предложит подходящий курс."
+    },
+    "type": "phone",
+    "style": "vertical",
+    "answers": [],
+    "fields": [
+      {
+        "label": {
+          "uz": "Ismingizni kiriting",
+          "ru": "Ваше имя"
+        },
+        "type": "text",
+        "placeholder": {
+          "uz": "Ismingizni kiriting",
+          "ru": "Введите ваше имя"
+        }
+      },
+      {
+        "label": {
+          "uz": "Telefon raqamingiz",
+          "ru": "Ваш номер телефона"
+        },
+        "type": "tel",
+        "placeholder": {
+          "uz": "+998 90 123 45 67",
+          "ru": "+998 90 123 45 67"
+        }
+      }
+    ]
+  }
+]
