@@ -1,4 +1,4 @@
-import { Box, RadioGroup, Typography } from "@mui/material";
+import { Box, RadioGroup } from "@mui/material";
 import ChoiceField from "../ChoiceField/ChoiceField";
 
 interface Label {
@@ -13,13 +13,13 @@ interface Answer {
 }
 
 const ChoiceQuestion = ({
-  type,
+  // type,
   answers,
-  question,
+  // question,
 }: {
   type: string;
   answers: Answer[];
-  question: object;
+  // question: object;
 }) => {
   return (
     <Box sx={{ padding: "16px", borderRadius: "12px", backgroundColor: "transparent" }}>
@@ -37,10 +37,10 @@ const ChoiceQuestion = ({
             <ChoiceField
               key={index}
               answer={{ label: labelObj }}
-              onChange={() => {}}
-              type={type}
+              // onChange={() => {}}
+              // type={type}
               id={String(index + 1)}
-              isChecked={false}
+              // isChecked={false}
             />
           )
         })}

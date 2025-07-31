@@ -3,15 +3,15 @@ import cls from './style.module.scss';
 
 const ChoiceField = ({ 
   answer, 
-  onChange, 
-  type,
-  isChecked,
+  // onChange, 
+  // type,
+  // isChecked,
   id
 }: {
   answer: { label: { ru: string } };
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  type: string;
-  isChecked?: boolean;
+  // onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  // type: string;
+  // isChecked?: boolean;
   id: string;
 }) => {
   return (

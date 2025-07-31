@@ -12,14 +12,17 @@ export interface Answer {
 }
 
 export const questionTypes = {
-  radio: ({answers, ...question}: {
+  radio: ({
+    answers, 
+    // ...question
+  }: {
     answers: Answer[];
     question: object;
   }) => (
     <ChoiceQuestion
       type={"radio"}
       answers={answers}
-      question={question}
+      // question={question}
     />
   ),
   checkbox: 'checkbox',
