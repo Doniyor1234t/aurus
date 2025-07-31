@@ -2,10 +2,13 @@ import { Box, Button, Stack, Typography } from "@mui/material";
 import FullLogo from '../../assets/icons/FullLogo';
 import cls from './SurveyLayout.module.scss';
 import { useState } from "react";
+import { questionTypes } from "./QuestionTypes";
+import db from "./survey.json"
 
 export const Survey = () => {
-  const [currentStep] = useState(1);
-  const totalSteps = 5;
+  const [currentStep] = useState(5);
+  const totalSteps = db?.length;
+  const Question = questionTypes?.["radio"]
   return (
     <Box sx={{
       backgroundColor: "#fff",
@@ -102,14 +105,49 @@ export const Survey = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
-          gap: 3,
+          justifyContent: "space-between",
           margin: "32px auto 28px auto",
           backgroundColor: "#FFF",
           height: "520px",
-          borderRadius: "40px"
+          borderRadius: "40px",
+          p: "52px 80px 82px 80px"
         }}>
-          {/* Add your survey content here */}
+          <Box sx={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            gap: 1,
+          }}>
+            <Typography variant="h3" sx={{ 
+              fontSize: { xs: "24px", md: "28px" }, 
+              lineHeight: "32px", 
+              fontWeight: 700, 
+              color: "#363636"
+            }}>
+              Uyqu tartibingiz qanday?
+            </Typography>
+            <Typography variant="body1" sx={{ 
+              fontSize: { xs: "14px", md: "18px" }, 
+              lineHeight: "22px", 
+              fontWeight: 400, 
+              color: "#363636" 
+            }}>
+              Bizning so‘rovnomamizga javob berish orqali uyqu tartibingizni yaxshilashga yordam bering.
+            </Typography>
+          </Box>
+          <Box sx={{
+            width: "100%",
+            minHeight: "260px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}>
+            {/* Here you can map through your questions and render them */}
+            {/* <Question
+              answers={db[currentStep - 1]?.answers ?? []}
+              question={db[currentStep - 1]}
+            /> */}
+          </Box>
         </Box>
         <Box sx={{
           margin: "0 auto",

@@ -744,7 +744,7 @@
       "uz": "Siz bilan bog‘lanishimiz uchun iltimos, ariza qoldiring.Mutaxassisimiz sizga qo‘ng‘iroq qiladi va mos kursni tavsiya qiladi.",
       "ru": "Пожалуйста, оставьте заявку, чтобы мы могли с вами связаться. Наш специалист свяжется с вами и предложит подходящий курс."
     },
-    "type": "phone",
+    "type": "form",
     "style": "vertical",
     "answers": [],
     "fields": [

@@ -1,0 +1,25 @@
+.choiceField {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.choiceFieldInput {
+  margin-right: 8px;
+}
+.choiceFieldLabel{
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+.choiceFieldRoot{
+  display: flex;
+  align-items: center;
+  &:hover {
+    border-color: #009966;
+  }
+}
