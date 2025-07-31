@@ -2,13 +2,13 @@ import { Box, Button, Stack, Typography } from "@mui/material";
 import FullLogo from '../../assets/icons/FullLogo';
 import cls from './SurveyLayout.module.scss';
 import { useState } from "react";
-import { questionTypes } from "./QuestionTypes";
+// import { questionTypes } from "./QuestionTypes";
 import db from "./survey.json"
 
 export const Survey = () => {
   const [currentStep] = useState(5);
   const totalSteps = db?.length;
-  const Question = questionTypes?.["radio"]
+  // const Question = questionTypes?.["radio"]
   return (
     <Box sx={{
       backgroundColor: "#fff",
