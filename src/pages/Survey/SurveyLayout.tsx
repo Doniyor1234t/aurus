@@ -2,13 +2,13 @@ import { Box, Button, Stack, Typography } from "@mui/material";
 import FullLogo from '../../assets/icons/FullLogo';
 import cls from './SurveyLayout.module.scss';
 import { useState } from "react";
-// import { questionTypes } from "./QuestionTypes";
+import { questionTypes } from "./QuestionTypes";
 import db from "./survey.json"
 
 export const Survey = () => {
   const [currentStep] = useState(5);
   const totalSteps = db?.length;
-  // const Question = questionTypes?.["radio"]
+  const Question = questionTypes?.["radio"]
   return (
     <Box sx={{
       backgroundColor: "#fff",
@@ -23,7 +23,7 @@ export const Survey = () => {
         width: "100%",
         position: "relative",
         overflow: "hidden",
-        backgroundColor: "#D9D9D9",
+        backgroundColor: "#F8F8F8",
         height: "100%",
         borderRadius: "36px",
         zIndex: 0,
@@ -143,10 +143,10 @@ export const Survey = () => {
             alignItems: "center",
           }}>
             {/* Here you can map through your questions and render them */}
-            {/* <Question
+            <Question
               answers={db[currentStep - 1]?.answers ?? []}
               question={db[currentStep - 1]}
-            /> */}
+            />
           </Box>
         </Box>
         <Box sx={{
