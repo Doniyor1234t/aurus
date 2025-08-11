@@ -4,11 +4,14 @@ import cls from './SurveyLayout.module.scss';
 import { useState } from "react";
 import { questionTypes } from "./QuestionTypes";
 import db from "./survey.json"
+import RightArrow from "../../assets/icons/RightArrow";
 
 export const Survey = () => {
-  const [currentStep] = useState(5);
+  const [currentStep, setCurrentStep] = useState(1);
   const totalSteps = db?.length;
-  const Question = questionTypes?.["radio"]
+  type QuestionTypeKey = keyof typeof questionTypes; // "radio" | "checkbox" | "input" | ...
+  const type = (db[currentStep - 1]?.type ?? "radio") as QuestionTypeKey;
+  const Question = questionTypes[type];
   return (
     <Box sx={{
       backgroundColor: "#fff",
@@ -124,7 +127,7 @@ export const Survey = () => {
               fontWeight: 700, 
               color: "#363636"
             }}>
-              Uyqu tartibingiz qanday?
+              {db[currentStep - 1]?.label?.uz}
             </Typography>
             <Typography variant="body1" sx={{ 
               fontSize: { xs: "14px", md: "18px" }, 
@@ -132,7 +135,7 @@ export const Survey = () => {
               fontWeight: 400, 
               color: "#363636" 
             }}>
-              Bizning so‘rovnomamizga javob berish orqali uyqu tartibingizni yaxshilashga yordam bering.
+              {db[currentStep - 1]?.description?.uz}
             </Typography>
           </Box>
           <Box sx={{
@@ -144,8 +147,11 @@ export const Survey = () => {
           }}>
             {/* Here you can map through your questions and render them */}
             <Question
+              key={`${type}-${currentStep}`}
               answers={db[currentStep - 1]?.answers ?? []}
               question={db[currentStep - 1]}
+              style={db[currentStep - 1]?.style}
+              id={String(currentStep)}
             />
           </Box>
         </Box>
@@ -168,8 +174,21 @@ export const Survey = () => {
           <rect width="40" height="40" rx="20" transform="matrix(-1 0 0 1 40 0)" fill="#009F6B"/>
           <path d="M12.9289 19.9998L16.9695 24.0404L18.9898 26.0607M12.9289 19.9998L16.9695 15.9592L18.9898 13.9389M12.9289 19.9998H21.0102L25.0508 19.9998L27.0711 19.9998" stroke="white" strokeWidth="1.5"/>
           </svg>}
+            onClick={() => setCurrentStep((prev) => Math.max(prev - 1, 1))}
+            disabled={currentStep === 1}
           >
             Oldingisi
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            size="largeSquare"
+            endIcon={<RightArrow />}
+            sx={{ paddingRight: { xs: "6px", md: "8px" } }}
+            onClick={() => setCurrentStep((prev) => Math.min(prev + 1, totalSteps))}
+            disabled={currentStep === totalSteps}
+          >
+            Keyingisi
           </Button>
         </Box>
       </Box>

@@ -14,18 +14,42 @@ export interface Answer {
 export const questionTypes = {
   radio: ({
     answers, 
+    style,
+    id,
     // ...question
   }: {
     answers: Answer[];
     question: object;
+    style: string;
+    id: string;
   }) => (
     <ChoiceQuestion
       type={"radio"}
       answers={answers}
+      style={style}
+      id={id}
       // question={question}
     />
   ),
-  checkbox: 'checkbox',
+  checkbox: ({
+    answers,
+    style,
+    id,
+    // ...question
+  }: {
+    answers: Answer[];
+    question: object;
+    style: string;
+    id: string;
+  }) =>(
+    <ChoiceQuestion
+      type={"checkbox"}
+      answers={answers}
+      style={style}
+      id={id}
+      // question={question}
+    />
+  ),
   input: 'input',
   textarea: 'textarea',
   select: 'select',

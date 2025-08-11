@@ -40,7 +40,8 @@
           "ru": "65+"
         }
       }
-    ]
+    ],
+    "style": "wrap"
   },
   {
     "label": {
@@ -71,7 +72,8 @@
           "ru": "Другое"
         }
       }
-    ]
+    ],
+    "style": "wrap"
   },
   {
     "label": {
@@ -102,7 +104,8 @@
           "ru": "Легкий вес"
         }
       }
-    ]
+    ],
+    "style": "wrap"
   },
   {
     "label": {
@@ -133,7 +136,8 @@
           "ru": "Высокий рост"
         }
       }
-    ]
+    ],
+    "style": "wrap"
   },
   {
     "label": {
@@ -289,7 +293,7 @@
   },
   {
     "label": {
-      "uz": "Oxirgi 3 oy ichida quyidagi mahsulotlarni qanchalik  tez-tez iste’mol qilgansiz?",
+      "uz": "Oxirgi 3 oy ichida quyidagi mahsulotlarni qanchalik tez-tez iste’mol qilgansiz?",
       "ru": "Что вы считаете здоровым образом жизни?"
     },
     "description": {
@@ -454,7 +458,7 @@
       "uz": "",
       "ru": ""
     },
-    "answrs": [
+    "answers": [
       {
         "label": {
           "uz": "Og`riq qoldiruvchilar",
@@ -737,7 +741,7 @@
   },
   {
     "label": {
-      "uz": "So‘rovnomadan o‘tganingiz  uchun rahmat!",
+      "uz": "So‘rovnomadan o‘tganingiz uchun rahmat!",
       "ru": "Спасибо за участие в опросе!"
     },
     "description": {
