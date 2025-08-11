@@ -53,4 +53,23 @@ export const questionTypes = {
   input: 'input',
   textarea: 'textarea',
   select: 'select',
+  form: ({
+    answers,
+    style,
+    id,
+    // ...question
+  }: {
+    answers: Answer[];
+    question: object;
+    style: string;
+    id: string;
+  }) => (
+    <ChoiceQuestion
+      type={"form"}
+      answers={answers}
+      style={style}
+      id={id}
+      // question={question}
+    />
+  )
 }
