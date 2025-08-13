@@ -145,20 +145,22 @@ export const Survey = () => {
             justifyContent: "center",
             alignItems: "center",
           }}>
-            {/* Here you can map through your questions and render them */}
             <Question
               key={`${type}-${currentStep}`}
               answers={db[currentStep - 1]?.answers ?? []}
               question={db[currentStep - 1]}
               style={db[currentStep - 1]?.style}
               id={String(currentStep)}
+              setCurrentStep={setCurrentStep}
             />
           </Box>
         </Box>
         <Box sx={{
           margin: "0 auto",
+          display: "flex",
+          gap: "20px"
         }}>
-          <Button
+          {currentStep !== 1 && <Button
             variant="containedReversed"
             size="largeSquare"
             sx={{ 
@@ -178,8 +180,8 @@ export const Survey = () => {
             disabled={currentStep === 1}
           >
             Oldingisi
-          </Button>
-          <Button
+          </Button>}
+          {currentStep !== totalSteps && <Button
             variant="contained"
             color="primary"
             size="largeSquare"
@@ -189,7 +191,7 @@ export const Survey = () => {
             disabled={currentStep === totalSteps}
           >
             Keyingisi
-          </Button>
+          </Button>}
         </Box>
       </Box>
     </Box>

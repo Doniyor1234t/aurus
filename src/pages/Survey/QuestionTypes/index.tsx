@@ -1,4 +1,5 @@
 import ChoiceQuestion from "../components/ChoiceQuestion/ChoiceQuestion";
+import FormQuestion from "../components/FormQuestion/FormType";
 
 export interface Label {
   uz: string;
@@ -16,18 +17,21 @@ export const questionTypes = {
     answers, 
     style,
     id,
+    setCurrentStep,
     // ...question
   }: {
     answers: Answer[];
     question: object;
     style: string;
     id: string;
+    setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
   }) => (
     <ChoiceQuestion
       type={"radio"}
       answers={answers}
       style={style}
       id={id}
+      setCurrentStep={setCurrentStep}
       // question={question}
     />
   ),
@@ -35,18 +39,21 @@ export const questionTypes = {
     answers,
     style,
     id,
+    setCurrentStep,
     // ...question
   }: {
     answers: Answer[];
     question: object;
     style: string;
     id: string;
+    setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
   }) =>(
     <ChoiceQuestion
       type={"checkbox"}
       answers={answers}
       style={style}
       id={id}
+      setCurrentStep={setCurrentStep}
       // question={question}
     />
   ),
@@ -57,18 +64,21 @@ export const questionTypes = {
     answers,
     style,
     id,
+    setCurrentStep,
     // ...question
   }: {
     answers: Answer[];
     question: object;
     style: string;
     id: string;
+    setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
   }) => (
-    <ChoiceQuestion
+    <FormQuestion
       type={"form"}
       answers={answers}
       style={style}
       id={id}
+      setCurrentStep={setCurrentStep}
       // question={question}
     />
   )

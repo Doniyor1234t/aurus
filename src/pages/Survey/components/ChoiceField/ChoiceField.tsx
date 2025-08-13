@@ -81,12 +81,14 @@ function BpCheckbox(props: CheckboxProps) {
     <Checkbox
       disableRipple
       color="default"
+      defaultChecked={props.checked}
       // checkedIcon={<BpCheckedCheckboxIcon />}
       // icon={<BpCheckboxIcon />}
       sx={{
         // display: "none",
         padding: 0,
         pr: 1,
+        color: "#969696",
         '&.Mui-checked': {
           color: '#009F6B',
         },
@@ -135,7 +137,7 @@ const ChoiceField = ({
         className={cls.choiceField}
         control={type == "radio" ? <BpRadio sx={{
           display: "none",
-        }} /> : <BpCheckbox onChange={onChange} sx={{
+        }} /> : <BpCheckbox checked={isChecked} onChange={onChange} sx={{
           display: "none",
         }} />}
         label={answer.label.uz}
@@ -143,11 +145,11 @@ const ChoiceField = ({
           marginLeft: 0,
           marginRight: 0,
           width: 'auto',
-          outline: isChecked ? '2px solid #009966' : '1px solid #ddd',
+          border: isChecked ? '1px solid #009966' : '1px solid #ddd',
           backgroundColor: isChecked ? '#f9fff9' : '#fff',
           // borderRadius: 3,
           transition: 'background-color 0.3s',
-          p: "12px 16px",
+          p: "12px 24px",
           borderRadius: 1.75,
           color: isChecked ? '#009966' : "inherit",
         }}
@@ -163,9 +165,10 @@ const ChoiceField = ({
           // display: style === "wrap" ? "none" : "block",
           p: 0,
           pr: 1.5
-        }} /> : <BpCheckbox onChange={onChange} sx={{
+        }} /> : <BpCheckbox checked={isChecked} onChange={onChange} sx={{
           // display: style === "wrap" ? "none" : "flex",
-          color: "#009F6B",
+          color: isChecked ? '#009F6B' : '#969696',
+          borderColor: "#969696",
           padding: 0,
           pr: 1.5
         }} />}
