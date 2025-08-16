@@ -265,26 +265,20 @@
     "answers": [
       {
         "label": {
-          "uz": "Juda faolman 8000-10000 +",
-          "ru": "Физическая активность"
+          "uz": "Doimiy tik turish",
+          "ru": "Постоянное стояние"
         }
       },
       {
         "label": {
-          "uz": "O`rtacha faolman 5000-7000",
-          "ru": "Питание"
+          "uz": "Doimiy o`tirish",
+          "ru": "Постоянное сидение"
         }
       },
       {
         "label": {
-          "uz": "Passivman 2000-4000",
-          "ru": "Психологическое состояние"
-        }
-      },
-      {
-        "label": {
-          "uz": "Deyarli harakatsizman 0-1000",
-          "ru": "Здоровье"
+          "uz": "Faol harakat (ham turib ham o`tirib)",
+          "ru": "Активное движение (как сидя, так и стоя)"
         }
       }
     ],
