@@ -1,6 +1,8 @@
 import { Box, Button, Container, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const RedirectBlock = () => {
+  const navigate = useNavigate();
   return (
     <Box>
       <Container maxWidth="xl">
@@ -111,6 +113,7 @@ const RedirectBlock = () => {
                   <path d="M27.5711 19.9998L23.5305 24.0404L21.5102 26.0607M27.5711 19.9998L23.5305 15.9592L21.5102 13.9389M27.5711 19.9998H19.4898L15.4492 19.9998L13.4289 19.9998" stroke="white" strokeWidth="1.5"/>
                 </svg>
               }
+              onClick={() => navigate('/survey')}
             >
               So‘rovnomani boshlash
             </Button>

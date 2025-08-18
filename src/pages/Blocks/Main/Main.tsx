@@ -5,8 +5,10 @@ import cls from "./Main.module.scss"
 import VectorPointer from "../../../assets/icons/VectorPointer"
 import MainImg from "../../../assets/images/20250703_1101_Lower Back Pain_remix_01jz7dtt1ff80sxymvhvkj8myf 1.png"
 import BackgroundIcon from "../../../assets/icons/BackgroundIcon"
+import { useNavigate } from "react-router-dom"
 
 export const MainBlock = () => {
+  const navigate = useNavigate();
   return (
     <Box sx={{position: 'relative'}}>
       <Container maxWidth="xl">
@@ -90,6 +92,7 @@ export const MainBlock = () => {
                   size="largeSquare"
                   endIcon={<RightArrow />}
                   sx={{ paddingRight: { xs: "6px", md: "8px" } }}
+                  onClick={() => navigate('/survey')}
                 >
                   So‘rovdan o‘tish
                 </Button>

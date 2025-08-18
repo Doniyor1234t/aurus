@@ -1,14 +1,17 @@
-import { HashRouter } from 'react-router-dom';
+import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
 import AppRoutes from './router';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './theme';
+import { createBrowserHistory } from "history";
+
+const history = createBrowserHistory({ window });
 
 const App = () => (
   <ThemeProvider theme={theme}>
     <CssBaseline />
-    <HashRouter basename="/">
+    <HistoryRouter history={history as any}>
       <AppRoutes />
-    </HashRouter>
+    </HistoryRouter>
   </ThemeProvider>
 );
 

@@ -5,8 +5,8 @@
       "ru": "Опрос"
     },
     "description": {
-      "uz": "Iltimos, yoshingizni tanlang:",
-      "ru": "Пожалуйста, выберите ваш возраст."
+      "uz": "",
+      "ru": ""
     },
     "type": "radio",
     "answers": [
@@ -49,8 +49,8 @@
       "ru": "Пол"
     },
     "description": {
-      "uz": "Iltimos, jinsingizni tanlang:",
-      "ru": "Пожалуйста, выберите ваш пол."
+      "uz": "",
+      "ru": ""
     },
     "type": "radio",
     "answers": [
@@ -82,7 +82,7 @@
     },
     "description": {
       "uz": "",
-      "ru": "Пожалуйста, выберите ваш вес."
+      "ru": ""
     },
     "type": "radio",
     "answers": [
@@ -114,7 +114,7 @@
     },
     "description": {
       "uz": "",
-      "ru": "Пожалуйста, выберите ваш рост."
+      "ru": ""
     },
     "type": "radio",
     "answers": [
@@ -146,7 +146,7 @@
     },
     "description": {
       "uz": "",
-      "ru": "Пожалуйста, выберите ваш режим сна."
+      "ru": ""
     },
     "type": "radio",
     "style": "vertical",
@@ -739,8 +739,8 @@
       "ru": "Спасибо за участие в опросе!"
     },
     "description": {
-      "uz": "Siz bilan bog‘lanishimiz uchun iltimos, ariza qoldiring.Mutaxassisimiz sizga qo‘ng‘iroq qiladi va mos kursni tavsiya qiladi.",
-      "ru": "Пожалуйста, оставьте заявку, чтобы мы могли с вами связаться. Наш специалист свяжется с вами и предложит подходящий курс."
+      "uz": "",
+      "ru": ""
     },
     "type": "form",
     "style": "vertical",

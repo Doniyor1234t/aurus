@@ -1,6 +1,6 @@
 import { AppBar, Avatar, AvatarGroup, Box, Button, ButtonGroup, Container, IconButton, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from "assets/Logo.svg"; 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -26,7 +26,9 @@ const menu = [
 ]
 
 
-const Header = () => (
+const Header = () => {
+  const navigate = useNavigate()
+  return (
   <AppBar position="static" color="inherit">
     <Container maxWidth="xl" sx={{ padding: "0 16px" }}>
         <AutoHeightToolbar disableGutters>
@@ -138,7 +140,7 @@ const Header = () => (
                 </Box>
               </Box>
               <Box>
-                <Button>So‘rovdan o‘tish</Button>
+                <Button onClick={() => navigate('/survey')}>So‘rovdan o‘tish</Button>
                 <IconButton
                   size="large"
                   sx={{ ml: 2, backgroundColor: '#F8F8F8' }}
@@ -157,6 +159,6 @@ const Header = () => (
         </AutoHeightToolbar>
     </Container>
   </AppBar>
-);
+)};
 
 export default Header;
