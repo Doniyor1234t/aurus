@@ -1,6 +1,7 @@
 import { Box, Button, Container, Divider, Typography } from "@mui/material"
 import Img from "assets/images/Rectangle20.png"
 import CheckIconSvgLicence from "../../../assets/icons/CheckIconSvg"
+import React from 'react'
 
 export const PriceBlock = () => {
   const priceDetails = [
@@ -142,7 +143,7 @@ export const PriceBlock = () => {
                 width: "100%",
               }}>
                 {priceDetails.map((detail, index) => (
-                  <>
+                  <React.Fragment key={index}>
                   <Box key={index} sx={{
                     display: "flex",
                     alignItems: "center",
@@ -188,7 +189,7 @@ export const PriceBlock = () => {
                     width: "100%",
                     borderColor: "rgba(221, 221, 221, 0.60)",
                   }} />}
-                  </>
+                  </React.Fragment>
                 ))}
               </Box>
             </Box>

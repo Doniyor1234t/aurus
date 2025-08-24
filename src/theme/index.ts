@@ -81,6 +81,35 @@ const theme = createTheme({
     borderRadius: 8,
   },
   components: {
+    MuiInput: {
+      styleOverrides: {
+        root: {
+          fontSize: '16px',
+          lineHeight: '24px',
+          color: '#363636',
+          '&::after': {
+            content: '""',
+            display: "none"
+          },
+          '&::before': {
+            content: '""',
+            display: "none"
+          },
+          '& .MuiInputBase-input': {
+            padding: '12px 16px',
+            borderRadius: '14px',
+            border: '1px solid rgba(54, 54, 54, 0.09)',
+            fontSize: '16px',
+            lineHeight: "20px",
+            fontWeight: 400,
+            '&:focus': {
+              borderColor: '#009966',
+              outline: 'none',
+            },
+          },
+        },
+      },
+    },
     MuiButtonGroup: {
       styleOverrides: {
         root: ({ownerState}) => {

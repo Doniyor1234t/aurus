@@ -28,3 +28,21 @@
   right: -39px;
   bottom: -141px;
 }
+
+.PhoneInput input{
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid rgba(54, 54, 54, 0.09);
+  line-height: 20px; 
+  padding: 12px 16px;
+  letter-spacing: -0.16px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 14px;
+
+  &:focus {
+    border-color: #009F6B;
+    outline: none;
+  }
+}

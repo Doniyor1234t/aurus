@@ -1,15 +1,32 @@
-import { Box, Button, ButtonGroup, Container, Rating, Typography } from "@mui/material"
+import { Box, Button, ButtonGroup, Container, Input, Modal, Rating, Typography } from "@mui/material"
 import ArrowRightIcon from "../../../assets/icons/ArrowRightIcon"
 import RightArrow from "../../../assets/icons/RightArrow"
 import cls from "./Main.module.scss"
 import VectorPointer from "../../../assets/icons/VectorPointer"
 import MainImg from "../../../assets/images/20250703_1101_Lower Back Pain_remix_01jz7dtt1ff80sxymvhvkj8myf 1.png"
 import BackgroundIcon from "../../../assets/icons/BackgroundIcon"
-import { useNavigate } from "react-router-dom"
+// import { useNavigate } from "react-router-dom"
+// import ReactInputMask from "react-input-mask"
+import PhoneInput from 'react-phone-number-input';
+import "react-phone-number-input/style.css";
+// import { useState } from "react"
+import { useMain } from "./useMain"
 
 export const MainBlock = () => {
-  const navigate = useNavigate();
+  const {
+    navigate,
+    setValue,
+    watch,
+    isOpen,
+    setIsOpen,
+    handleClose,
+    handleSubmit,
+    register,
+    onSubmit
+  } = useMain();
+
   return (
+    <>
     <Box sx={{position: 'relative'}}>
       <Container maxWidth="xl">
         <Box sx={{
@@ -83,6 +100,7 @@ export const MainBlock = () => {
                   variant="contained"
                   color="secondary"
                   size="largeSquare"
+                  onClick={() => setIsOpen(true)}
                 >
                   Ariza qo’ldirish
                 </Button>
@@ -108,6 +126,7 @@ export const MainBlock = () => {
                   variant="contained"
                   color="primary"
                   size="largeSquare"
+                  onClick={() => setIsOpen(true)}
                 >
                   Ariza qo’ldirish
                 </Button>
@@ -265,5 +284,131 @@ export const MainBlock = () => {
         </Box>
       </Box>
     </Box>
+    <Modal
+      open={isOpen}
+      onClose={handleClose}
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
+    >
+      <Box 
+        component="form"
+        onSubmit={handleSubmit(onSubmit)}
+        sx={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: 660,
+          bgcolor: 'background.paper',
+          boxShadow: 24,
+          borderRadius: "40px",
+          margin: "0 auto",
+          display: "flex",
+          justifyContent: "center",
+          py: 10,
+          px: 15
+        }}>
+        <Box sx={{
+          display: "flex",
+          flexDirection: "column",
+          gap: 2.5,
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "420px"
+        }}>
+          <Box sx={{
+            mb: 2,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 1
+          }}>
+            <Typography variant="h6" id="modal-modal-title" sx={{
+              fontSize: "28px",
+              fontWeight: 700,
+              lineHeight: "32px",
+              color: "#363636",
+            }}>
+              Ariza qoldiring
+            </Typography>
+            <Typography variant="body1" id="modal-modal-description" sx={{
+              fontSize: "18px",
+              fontWeight: 400,
+              lineHeight: "24px",
+              color: "#363636",
+            }}>
+              Mutaxassisimiz sizga qo‘ng‘iroq qiladi va mos kursni tavsiya qiladi.
+            </Typography>
+          </Box>
+          <Box sx={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            gap: 1.5,
+          }}>
+            <Input
+              placeholder="Ismingizni kiriting"
+              {...register("name")}
+              sx={{
+                width: "100%",
+              }}
+            />
+            <Box>
+
+              {/* <ReactInputMask
+                mask="(99) - 999 - 99 - 99"
+                maskChar={"_"}
+                placeholder="(99) - 999 - 99 - 99"
+                alwaysShowMask={false}
+                className={cls.phoneInput}
+                value={value}
+                onChange={(e) => {
+                  setValue(e.target.value)
+                }}
+                name="phone_number"
+                // sx={{
+                //   width: "100%",
+                // }}
+              /> */}
+              <PhoneInput
+                value={watch("phone_number")}
+                onChange={(value) => {
+                  setValue("phone_number", value)
+                }}
+                country={"UZ"}
+                defaultCountry={"UZ"}
+                countries={['UZ']}
+                countrySelectComponent={() => null} 
+                international={true}
+                countryCallingCodeEditable={false}
+                placeholder={'xx xxx xx xx'}
+                limitMaxLength={true}
+                className={cls.PhoneInput}
+                name={'phone_number'}
+              />
+            </Box>
+          </Box>
+          <Button
+            variant="contained"
+            color="primary"
+            size="largeSquare"
+            // onClick={handleClose}
+            type="submit"
+            sx={{
+              width: "100%",
+              fontSize: "18px",
+              lineHeight: "24px",
+              fontWeight: 700,
+              py: 2
+            }}
+          >
+            Ariza qoldirish
+          </Button>
+        </Box>
+      </Box>
+    </Modal>
+    </>
   )
 }

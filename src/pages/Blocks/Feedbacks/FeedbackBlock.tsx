@@ -179,7 +179,7 @@ export const FeedbackBlock = () => {
               width: { xs: "280px", md: "380px" },
             }}
           >
-            <CircularVideoComponent src="" size={{ xs: "280px", md: "380px" }} poster={PosterImg} />
+            <CircularVideoComponent src="#" size={{ xs: "280px", md: "380px" }} poster={PosterImg} />
           </Box>
         </Box>
       </Container>
