@@ -23,7 +23,7 @@ export const useMain = () => {
           "accept": "application/json",
         }
       };
-      const response = await axios.post(
+      await axios.post(
         "http://34.71.211.25:8080/v1/amocrm/create-lead", 
         data, 
         config
