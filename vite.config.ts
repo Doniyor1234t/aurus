@@ -10,6 +10,15 @@ const __dirname = dirname(__filename);
 export default defineConfig({
   base: "/",
   plugins: [react()],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://34.46.237.11:8080',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
+  },
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
