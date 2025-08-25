@@ -1,7 +1,12 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, type FieldValues } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+
+type FormValues = {
+  name: string;
+  phone_number?: string;
+};
 
 export const useMain = () => {
   const navigate = useNavigate();
@@ -11,9 +16,33 @@ export const useMain = () => {
     setValue,
     watch,
     register,
-    handleSubmit
-  } = useForm();
-// axios post request
+    handleSubmit,
+    reset,
+    formState: { errors }
+  } = useForm<FormValues>({
+    resolver: async (data: FieldValues) => {
+      const errors: Record<string, any> = {};
+
+      if (!data.name) {
+        errors.name = { type: "required", message: "Ism talab qilinadi" };
+      }
+
+      if (!data.phone_number) {
+        errors.phone_number = { type: "required", message: "Telefon raqami talab qilinadi" };
+      }
+
+      return {
+        values: Object.keys(errors).length ? {} : data,
+        errors,
+      };
+    }
+  });
+
+  const handleClose = () => {
+    setIsOpen(false);
+    reset();
+  }
+
   const postUserData = async (data: any) => {
     try {
       // set header params
@@ -23,22 +52,25 @@ export const useMain = () => {
           "accept": "application/json",
         }
       };
-      await axios.post(
-        "http://34.71.211.25:8080/v1/amocrm/create-lead", 
+      const res = await axios.post(
+        "http://34.46.237.11:8080/v1/amocrm/create-lead", 
         data, 
         config
       );
+      if (res) {
+        handleClose()
+      }
     } catch (error) {
       console.error("Error posting user data:", error);
     }
   };
 
-  const handleClose = () => {
-    setIsOpen(false);
-  }
-
   const onSubmit = (data: any) => {
-    postUserData(data);
+    postUserData({
+      data: {
+        ...data
+      }
+    });
   };
 
   // const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -56,6 +88,7 @@ export const useMain = () => {
     handleClose,
     handleSubmit,
     register,
-    onSubmit
+    onSubmit,
+    errors
   };
 };

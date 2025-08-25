@@ -107,6 +107,11 @@ const theme = createTheme({
               outline: 'none',
             },
           },
+          '&.Mui-error': {
+            '& .MuiInputBase-input': {
+              borderColor: 'red',
+            },
+          },
         },
       },
     },

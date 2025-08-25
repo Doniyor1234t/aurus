@@ -11,6 +11,7 @@ import PhoneInput from 'react-phone-number-input';
 import "react-phone-number-input/style.css";
 // import { useState } from "react"
 import { useMain } from "./useMain"
+import clsx from 'clsx'
 
 export const MainBlock = () => {
   const {
@@ -22,7 +23,8 @@ export const MainBlock = () => {
     handleClose,
     handleSubmit,
     register,
-    onSubmit
+    onSubmit,
+    errors
   } = useMain();
 
   return (
@@ -348,13 +350,23 @@ export const MainBlock = () => {
             flexDirection: "column",
             gap: 1.5,
           }}>
-            <Input
-              placeholder="Ismingizni kiriting"
-              {...register("name")}
-              sx={{
-                width: "100%",
-              }}
-            />
+            <Box>
+              <Input
+                placeholder="Ismingizni kiriting"
+                {...register("name")}
+                sx={{
+                  width: "100%",
+                }}
+                error={!!errors.name}
+              />
+              {!!errors.name && (
+                <Typography variant="body2" color="error" sx={{
+                  textAlign: "left"
+                }}>
+                  {errors.name.message}
+                </Typography>
+              )}
+            </Box>
             <Box>
 
               {/* <ReactInputMask
@@ -374,7 +386,7 @@ export const MainBlock = () => {
               /> */}
               <PhoneInput
                 value={watch("phone_number")}
-                onChange={(value) => {
+                onChange={(value: string | undefined) => {
                   setValue("phone_number", value)
                 }}
                 country={"UZ"}
@@ -385,9 +397,18 @@ export const MainBlock = () => {
                 countryCallingCodeEditable={false}
                 placeholder={'xx xxx xx xx'}
                 limitMaxLength={true}
-                className={cls.PhoneInput}
+                className={clsx(cls.PhoneInput, {
+                  [cls.error]: !!errors.phone_number
+                })}
                 name={'phone_number'}
               />
+              {!!errors.phone_number && (
+                <Typography variant="body2" color="error" sx={{
+                  textAlign: "left"
+                }}>
+                  {errors.phone_number.message}
+                </Typography>
+              )}
             </Box>
           </Box>
           <Button
